@@ -1,0 +1,48 @@
+# Spring Boot \u901A\u7528\u914D\u7F6E\u53C2\u6570(\u5B98\u65B9\u6587\u6863)
+# https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# SpringBoot\u4F7F\u7528\u4E00\u4E2A\u5168\u5C40\u7684\u914D\u7F6E\u6587\u4EF6 \uFF0C \u914D\u7F6E\u6587\u4EF6\u540D\u79F0\u662F\u56FA\u5B9A\u7684
+#  application.properties
+#  \u8BED\u6CD5\u7ED3\u6784 \uFF1Akey=value
+#  application.yml
+#  \u8BED\u6CD5\u7ED3\u6784 \uFF1Akey\uFF1A\u7A7A\u683C value
+
+#  \u914D\u7F6E\u6587\u4EF6\u7684\u4F5C\u7528 \uFF1A\u4FEE\u6539SpringBoot\u81EA\u52A8\u914D\u7F6E\u7684\u9ED8\u8BA4\u503C\uFF0C\u56E0\u4E3ASpringBoot\u5728\u5E95\u5C42\u90FD\u7ED9\u6211\u4EEC\u81EA\u52A8\u914D\u7F6E\u597D\u4E86\uFF1B
+#  \u6BD4\u5982\u6211\u4EEC\u53EF\u4EE5\u5728\u914D\u7F6E\u6587\u4EF6\u4E2D\u4FEE\u6539Tomcat \u9ED8\u8BA4\u542F\u52A8\u7684\u7AEF\u53E3\u53F7\uFF01\u6D4B\u8BD5\u4E00\u4E0B\uFF01
+server:
+  port: 8080
+
+
+#\u5BF9\u8C61\u3001Map\u683C\u5F0F
+#k:
+#  v1:
+#  v2:
+#  \u5728\u4E0B\u4E00\u884C\u6765\u5199\u5BF9\u8C61\u7684\u5C5E\u6027\u548C\u503C\u5F97\u5173\u7CFB\uFF0C\u6CE8\u610F\u7F29\u8FDB\uFF1B\u6BD4\u5982\uFF1A
+#student:
+#  name: qinjiang
+#  age: 3
+
+#  \u884C\u5185\u5199\u6CD5
+#student: {name: qinjiang,age: 3}
+
+#  \u6570\u7EC4\uFF08 List\u3001set \uFF09
+#  \u7528 - \u503C\u8868\u793A\u6570\u7EC4\u4E2D\u7684\u4E00\u4E2A\u5143\u7D20,\u6BD4\u5982\uFF1A
+#pets:
+#  - cat
+#  - dog
+#  - pig
+#  \u884C\u5185\u5199\u6CD5
+#pets: [cat,dog,pig]
+
+person:
+  name: qinjian${random.uuid}
+  age: ${random.int}
+  happy: false
+  birth: 2000/01/01
+  maps: {k1: v1,k2: v2}
+  lists:
+    - code
+    - girl
+    - music
+  dog:
+    name: "\u65FA\u8D22"
+    age: 1
